@@ -3,7 +3,7 @@
  * Date: 06/04/2024
  * Description: This is the implementation of the ArrayBag class
  */
-#include "arraybag.hpp"
+#include "ArrayBag.hpp"
 
 template<class T>
 ArrayBag<T>::ArrayBag(): item_count_{0} { }
