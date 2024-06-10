@@ -46,9 +46,9 @@ template<class T>
 int ArrayBag<T>::getFrequencyOf(const T& an_entry) const {
     int frequency = 0;
     // iterate through the items in the items_ array
-    for (int curr: items_) {
+    for (int i = 0; i < item_count_; i++) {
         // increment the frequency of the item if it is found
-        if (curr == an_entry) {
+        if (items_[i] == an_entry) {
             frequency++;
         }
     }
@@ -59,8 +59,8 @@ template<class T>
 std::vector<T> ArrayBag<T>::toVector() const {
     std::vector<T> bag_contents;
     // add each item of the items_ array to bag_contents
-    for (int item: items_) {
-        bag_contents.push_back(item);
+    for (int i = 0; i < item_count_; i++) { 
+        bag_contents.push_back(items_[i]);
     }
     return bag_contents;
 }
